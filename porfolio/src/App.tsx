@@ -3,6 +3,7 @@ function App() {
     <div>
       porfolio
       <p>test</p>
+      <p>test from other computer</p>
     </div>
   );
 }
