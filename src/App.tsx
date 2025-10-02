@@ -1,8 +1,10 @@
+import "./assets/main.scss";
+
 function App() {
   return (
     <div>
       porfolio
-      <p>test</p>
+      <p className="$color-bg">test</p>
       <p>test from other computer</p>
     </div>
   );
