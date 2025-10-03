@@ -1,10 +1,20 @@
 import cvFile from "../../files/cv.pdf";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
     <section className="about-me">
       <h1 className="about-me__name"> Przemyslaw Bialk </h1>
-      <span className="about-me__description">Frontend REACT Developer</span>
+      <motion.span
+        className="about-me__description"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 2, // czas jednego obrotu
+        }}
+      >
+        Frontend REACT Developer
+      </motion.span>
       <div className="about-me__links">
         <a
           href={cvFile}

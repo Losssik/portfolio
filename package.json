@@ -20,6 +20,7 @@
     "vite": "^7.1.8"
   },
   "dependencies": {
+    "motion": "^12.23.22",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   }

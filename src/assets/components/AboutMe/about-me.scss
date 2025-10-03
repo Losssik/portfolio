@@ -1,9 +1,11 @@
+@use "../../styles/base/variables" as *;
+
 .about-me {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid $color-text-secondary;
+  border: 1px solid $color-text-secondary;
   margin: 20px;
   border-radius: $radius;
   padding: 40px 0;

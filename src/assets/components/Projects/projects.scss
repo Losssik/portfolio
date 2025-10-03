@@ -1,0 +1,8 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
+  gap: 20px; /* odstępy między kolumnami i wierszami */
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+}

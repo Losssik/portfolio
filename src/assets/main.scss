@@ -1,11 +1,13 @@
-@import "../assets/styles/base/variables";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap");
+@use "styles/base/variables" as *;
+@use "components/AboutMe/about-me";
+@use "components/ProjectCard/project-card.scss";
+@use "components/Projects/projects.scss";
 
-@import "../assets/components/AboutMe/about-me.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap");
 
 body {
   background-color: $color-bg;
-  font-family: "Inter", sans-serif;
+  font-family: $font-sans;
   color: $color-text-primary;
   max-width: $container-width;
   margin: 0 auto;
@@ -13,6 +15,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $color-text-primary;
 
   &:visited,
   &:active {
