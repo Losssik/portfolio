@@ -1,11 +1,10 @@
 import "./assets/main.scss";
+import AboutMe from "./assets/components/AboutMe/AboutMe";
 
 function App() {
   return (
-    <div>
-      porfolio
-      <p className="$color-bg">test</p>
-      <p>test from other computer</p>
+    <div className="">
+      <AboutMe />
     </div>
   );
 }
