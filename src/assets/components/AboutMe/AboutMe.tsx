@@ -5,16 +5,24 @@ const AboutMe = () => {
     <section className="about-me">
       <h1 className="about-me__name"> Przemyslaw Bialk </h1>
       <span className="about-me__description">Frontend REACT Developer</span>
-      <a href={cvFile} target="_blank" rel="noopener noreferrer">
-        My resume
-      </a>
-      <a
-        href="https://github.com/Losssik"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Github
-      </a>
+      <div className="about-me__links">
+        <a
+          href={cvFile}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="about-me__link"
+        >
+          My resume
+        </a>
+        <a
+          href="https://github.com/Losssik"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="about-me__link"
+        >
+          Github
+        </a>
+      </div>
     </section>
   );
 };

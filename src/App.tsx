@@ -3,7 +3,7 @@ import AboutMe from "./assets/components/AboutMe/AboutMe";
 
 function App() {
   return (
-    <div className="">
+    <div className="$container-width">
       <AboutMe />
     </div>
   );

@@ -1,8 +1,21 @@
 @import "../assets/styles/base/variables";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap");
 
+@import "../assets/components/AboutMe/about-me.scss";
+
 body {
   background-color: $color-bg;
   font-family: "Inter", sans-serif;
   color: $color-text-primary;
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited,
+  &:active {
+    color: $color-text-primary;
+  }
 }
