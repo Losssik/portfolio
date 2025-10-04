@@ -1,6 +1,7 @@
 import "./assets/main.scss";
 import AboutMe from "./assets/components/AboutMe/AboutMe";
 import Projects from "./assets/components/Projects/Projects";
+import Description from "./assets/components/Description/Description";
 
 function App() {
   const projects = [
@@ -34,6 +35,7 @@ function App() {
     <div className="$container-width">
       <AboutMe />
       <Projects projects={projects} />
+      <Description />
     </div>
   );
 }

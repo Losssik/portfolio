@@ -11,11 +11,14 @@ type ProjectsProps = {
 
 const Projects = ({ projects }: ProjectsProps) => {
   return (
-    <div className="projects-grid">
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
-    </div>
+    <section className="porjects">
+      <h2 className="projects__header">projects</h2>
+      <div className="projects__grid">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
+    </section>
   );
 };
 

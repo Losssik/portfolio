@@ -1,8 +1,15 @@
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
-  gap: 20px; /* odstępy między kolumnami i wierszami */
-  justify-content: center;
-  align-items: start;
-  padding: 20px;
+.projects {
+  &__header {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+  }
 }

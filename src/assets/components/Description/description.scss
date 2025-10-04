@@ -1,0 +1,21 @@
+@use "../../styles/base/variables" as *;
+
+.description {
+  border: 1px solid $color-text-secondary;
+  border-radius: $radius;
+  padding: 40px 0;
+  margin: 20px;
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+  }
+
+  &__photo {
+    border-radius: 3000px;
+    height: 100px;
+    margin-left: 30px;
+  }
+}
