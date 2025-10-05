@@ -1,8 +1,10 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
 
-type Project = {
+export type Project = {
   title: string;
   description: string;
+  image: string;
+  tags?: string[];
 };
 
 type ProjectsProps = {

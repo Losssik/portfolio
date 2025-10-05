@@ -1,7 +1,4 @@
-type Project = {
-  title: string;
-  description: string;
-};
+import type { Project } from "../Projects/Projects";
 
 type ProjectCardProp = {
   project: Project;
@@ -9,10 +6,20 @@ type ProjectCardProp = {
 
 const ProjectCard = ({ project }: ProjectCardProp) => {
   return (
-    <div className="project-card">
-      <div>
+    <div
+      className="project-card"
+      style={{
+        backgroundImage: `url(${project.image})`,
+      }}
+    >
+      <div className="project-card__overlay">
         <h3 className="project-card__title">{project.title}</h3>
-        <p>{project.description}</p>
+        <p className="project-card__description">{project.description}</p>
+        <p className="project-card__tags">
+          {project.tags?.map((tag) => (
+            <p className="project-card__tag">{tag}</p>
+          ))}
+        </p>
       </div>
     </div>
   );
