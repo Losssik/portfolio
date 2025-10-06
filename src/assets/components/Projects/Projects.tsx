@@ -1,10 +1,12 @@
+import type { ReactElement } from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 export type Project = {
   title: string;
-  description: string;
-  image: string;
   tags?: string[];
+  logo?: ReactElement;
+  github?: string;
+  live_version?: string;
 };
 
 type ProjectsProps = {

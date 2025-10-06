@@ -3,42 +3,56 @@ import AboutMe from "./assets/components/AboutMe/AboutMe";
 import Projects from "./assets/components/Projects/Projects";
 import Description from "./assets/components/Description/Description";
 
-import myImg from "./assets/photos/ja.jpg";
-import imgCleanRead from "./assets/photos/clean_read2.jpg";
-import imgTapesTrasfer from "./assets/photos/tapes_transfer1.jpg";
+import { PiCassetteTapeLight } from "react-icons/pi";
+import {
+  IoBookOutline,
+  IoCarSportOutline,
+  IoRestaurantOutline,
+  IoBagCheckOutline,
+} from "react-icons/io5";
+import { GiBoatFishing } from "react-icons/gi";
 
 function App() {
   const projects = [
     {
       title: "tapes-transfer",
       description: "company site built with REACT",
-      image: imgTapesTrasfer,
-      tags: ["test", "tagow"],
+      tags: ["react", "styled-components", "commercial project"],
+      logo: <PiCassetteTapeLight />,
+      github: "https://github.com/Losssik/kasety",
+      live_version: "https://tapestransfer.com/",
     },
     {
       title: "clean-read",
-      description: "read, add, generate your favorites articles",
-      image: imgCleanRead,
+      logo: <IoBookOutline />,
+      tags: ["MERN", "full-stack", "react", "jwt"],
+      github: "https://github.com/Losssik/clean-read",
+      live_version: "https://host559218.xce.pl/",
     },
     {
-      title: "Portfolio",
-      description: "Personal portfolio site built with React and Sass",
-      image: myImg,
+      title: "tiste",
+      tags: ["react", "recharts", "local storage", "leaflet"],
+      logo: <GiBoatFishing />,
+      live_version: "https://tiste.pl/",
     },
     {
-      title: "Weather App",
-      description: "App showing live weather data using OpenWeather API",
-      image: myImg,
+      title: "osk-abas",
+      tags: ["react", "design", "commercial project"],
+      logo: <IoCarSportOutline />,
+      github: "https://github.com/Losssik/abas",
+      live_version: "https://osk-abas.pl/",
     },
     {
-      title: "Portfolio",
-      description: "Personal portfolio site built with React and Sass",
-      image: myImg,
+      title: "restauracja leśna",
+      tags: ["wordpress", "AI implementaion", "commercial project"],
+      logo: <IoRestaurantOutline />,
+      live_version: "https://restauracjalesna.com/",
     },
     {
-      title: "Weather App",
-      description: "App showing live weather data using OpenWeather API",
-      image: myImg,
+      title: "miropak",
+      tags: ["wordpress", "woocommerce", "apilo", "commercial project"],
+      logo: <IoBagCheckOutline />,
+      live_version: "https://miropak.pl/",
     },
   ];
 
