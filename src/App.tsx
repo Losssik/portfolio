@@ -11,6 +11,7 @@ import {
   IoBagCheckOutline,
 } from "react-icons/io5";
 import { GiBoatFishing } from "react-icons/gi";
+import ContactForm from "./assets/components/ContactForm/ContactForm";
 
 function App() {
   const projects = [
@@ -61,6 +62,7 @@ function App() {
       <AboutMe />
       <Projects projects={projects} />
       <Description />
+      <ContactForm />
     </div>
   );
 }
