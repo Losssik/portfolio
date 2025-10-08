@@ -1,7 +1,9 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FaGithub, FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
-const ContactForm = () => {
+const ContactSection = () => {
   const [mail, setMail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [status, setStatus] = useState<"success" | "error" | "null">("null");
@@ -9,7 +11,6 @@ const ContactForm = () => {
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (!form.current) return;
 
     try {
@@ -27,32 +28,88 @@ const ContactForm = () => {
       setMessage("");
       setStatus("error");
     } finally {
-      setTimeout(() => setStatus("null"), 2000);
+      setTimeout(() => setStatus("null"), 2500);
     }
   };
 
   return (
-    <>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          onChange={(e) => setMail(e.target.value)}
-          value={mail}
-        />
-        <label>Message</label>
-        <textarea
-          name="message"
-          onChange={(e) => setMessage(e.target.value)}
-          value={message}
-        />
-        <input type="submit" value="Send" />
-      </form>
-      {status === "success" && <p>message sent </p>}
-      {status === "error" && <p>couldn't send message, try again later</p>}
-    </>
+    <div className="contact-wrapper">
+      <div className="contact">
+        <h2 className="contact__heading">Contact Me</h2>
+        <form ref={form} onSubmit={sendEmail} className="contact__form">
+          <label className="contact__label" htmlFor="email">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Your email..."
+            onChange={(e) => setMail(e.target.value)}
+            value={mail}
+            className="contact__input"
+            required
+          />
+
+          <label className="contact__label" htmlFor="message">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message..."
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+            className="contact__textarea"
+            required
+          />
+
+          <input
+            type="submit"
+            value="Send Message"
+            className="contact__button"
+          />
+        </form>
+
+        {status === "success" && (
+          <p className="contact__status contact__status--success">
+            Message sent!
+          </p>
+        )}
+        {status === "error" && (
+          <p className="contact__status contact__status--error">
+            Couldn't send message. Try again later.
+          </p>
+        )}
+      </div>
+
+      <div className="contact-info">
+        <h3 className="contact-info__heading">Get in touch</h3>
+        <ul className="contact-info__list">
+          <li className="contact-info__item">
+            <MdEmail className="contact-info__icon" />
+            <a href="mailto:przemek.bialkwno@gmail.com">
+              przemek.bialkwno@gmail.com
+            </a>
+          </li>
+          <li className="contact-info__item">
+            <FaPhoneAlt className="contact-info__icon" />
+            <a href="tel:+48530034701">530 034 701</a>
+          </li>
+          <li className="contact-info__item">
+            <FaGithub className="contact-info__icon" />
+            <a
+              href="https://github.com/Losssik"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 
-export default ContactForm;
+export default ContactSection;
