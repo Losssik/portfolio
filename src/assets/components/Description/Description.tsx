@@ -9,7 +9,7 @@ const Description = () => {
           <div>
             <img src={photoOfMe} className="description__photo" />
           </div>
-          <div>
+          <div className="description__text">
             <p>I am a self-taught frontend developer </p>
             <p>
               passionate about building interactive and accessible web

@@ -125,12 +125,12 @@
     font-size: 1rem;
 
     a {
-      color: $color-text-primary;
+      color: $color-text-primary !important;
       text-decoration: none;
       transition: color 0.3s ease;
 
       &:hover {
-        color: $color-accent;
+        color: $color-accent !important;
       }
     }
   }

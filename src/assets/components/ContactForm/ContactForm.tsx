@@ -102,6 +102,7 @@ const ContactSection = () => {
               href="https://github.com/Losssik"
               target="_blank"
               rel="noopener noreferrer"
+              className="contact-info__link"
             >
               GitHub
             </a>
