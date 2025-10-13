@@ -35,7 +35,7 @@ const ContactSection = () => {
   return (
     <div className="contact-wrapper">
       <div className="contact">
-        <h2 className="contact__heading">Contact Me</h2>
+        <h3 className="contact__heading">Contact me</h3>
         <form ref={form} onSubmit={sendEmail} className="contact__form">
           <label className="contact__label" htmlFor="email">
             Email

@@ -7,7 +7,6 @@
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
   border: 1px solid $color-text-secondary;
 
   &:hover {
@@ -27,7 +26,8 @@
   }
 
   &__logo {
-    font-size: 100px;
+    font-size: 70px;
+    margin-bottom: 20px;
   }
 
   &__title {
@@ -61,6 +61,7 @@
 
   &__links {
     margin: 10px 5px 0 5px;
+    padding-bottom: 10px;
   }
 
   &__link {

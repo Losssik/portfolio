@@ -77,16 +77,14 @@
 
   &__status {
     text-align: center;
-    font-size: 0.95rem;
-    margin-top: 0.5rem;
-
-    &--success {
-      color: $color-accent;
-    }
-
-    &--error {
-      color: #ff4d4d;
-    }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: $color-accent;
+    color: black;
+    padding: 10px 25px;
+    border-radius: $radius;
+    font-weight: 600;
   }
 }
 
@@ -104,7 +102,7 @@
 
   &__heading {
     color: $color-accent;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
   }
@@ -121,22 +119,12 @@
   &__item {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 10px;
     font-size: 1rem;
-
-    a {
-      color: $color-text-primary !important;
-      text-decoration: none;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $color-accent !important;
-      }
-    }
   }
 
   &__icon {
-    font-size: 1.4rem;
+    font-size: 16px;
     color: $color-accent;
   }
 }

@@ -28,10 +28,10 @@
 
   &__link {
     background-color: $color-accent;
-    color: $color-bg;
+    color: $color-bg !important;
     padding: 0.75rem 1.25rem;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
     border-radius: $radius;
     cursor: pointer;

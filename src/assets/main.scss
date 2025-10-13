@@ -20,17 +20,22 @@ body {
 
 a {
   text-decoration: none;
-  color: $color-bg;
+  color: $color-text-primary;
 
   &:visited,
   &:active {
-    color: $color-bg;
+    color: $color-text-primary;
+  }
+  &:hover {
+    color: $color-accent;
   }
 }
 
 h2 {
-  margin-top: 50px;
-  font-size: 30px;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
   text-align: center;
   color: $color-accent;
+  text-transform: lowercase;
 }
