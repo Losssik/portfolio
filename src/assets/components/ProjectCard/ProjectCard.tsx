@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import type { Project } from "../Projects/Projects";
 
 type ProjectCardProp = {
@@ -6,17 +7,57 @@ type ProjectCardProp = {
 
 const ProjectCard = ({ project }: ProjectCardProp) => {
   return (
-    <div className="project-card">
+    <motion.div
+      className="project-card"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       <div className="project-card__overlay">
-        <div className="project-card__logo">{project.logo}</div>
-        <h3 className="project-card__title">{project.title}</h3>
-
-        <p className="project-card__tags">
-          {project.tags?.map((tag) => (
-            <p className="project-card__tag">{tag}</p>
+        <motion.div
+          className="project-card__logo"
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          {project.logo}
+        </motion.div>
+        <motion.h3
+          className="project-card__title"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          {project.title}
+        </motion.h3>
+        <div className="project-card__tags">
+          {project.tags?.map((tag, index) => (
+            <motion.span
+              key={tag}
+              className="project-card__tag"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: 0.3 + index * 0.1,
+              }}
+              viewport={{ once: true }}
+            >
+              {tag}
+            </motion.span>
           ))}
-        </p>
-        <div className="project-card__links">
+        </div>
+        <motion.div
+          className="project-card__links"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+          viewport={{ once: true }}
+        >
           {project.github && (
             <a
               href={project.github}
@@ -37,9 +78,9 @@ const ProjectCard = ({ project }: ProjectCardProp) => {
               Live
             </a>
           )}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
