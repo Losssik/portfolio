@@ -4,18 +4,36 @@ import { motion } from "framer-motion";
 const AboutMe = () => {
   return (
     <section className="about-me">
-      <h1 className="about-me__name"> Przemyslaw Bialk </h1>
+      <motion.h1
+        className="about-me__name"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Przemyslaw Bialk
+      </motion.h1>
       <motion.span
         className="about-me__description"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 2,
+          duration: 1,
+          ease: "easeOut",
+          delay: 0.3,
         }}
       >
         Frontend REACT Developer
       </motion.span>
-      <div className="about-me__links">
+      <motion.div
+        className="about-me__links"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+          delay: 0.6,
+        }}
+      >
         <a
           href={cvFile}
           target="_blank"
@@ -32,7 +50,7 @@ const AboutMe = () => {
         >
           Github
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 };

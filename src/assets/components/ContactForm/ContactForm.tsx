@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaGithub, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ContactSection = () => {
   const [mail, setMail] = useState<string>("");
@@ -34,13 +35,43 @@ const ContactSection = () => {
 
   return (
     <div className="contact-wrapper">
-      <div className="contact">
-        <h3 className="contact__heading">Contact me</h3>
-        <form ref={form} onSubmit={sendEmail} className="contact__form">
-          <label className="contact__label" htmlFor="email">
+      <motion.div
+        className="contact"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <motion.h3
+          className="contact__heading"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Contact me
+        </motion.h3>
+
+        <motion.form
+          ref={form}
+          onSubmit={sendEmail}
+          className="contact__form"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <motion.label
+            className="contact__label"
+            htmlFor="email"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
             Email
-          </label>
-          <input
+          </motion.label>
+          <motion.input
             id="email"
             type="email"
             name="email"
@@ -49,12 +80,23 @@ const ContactSection = () => {
             value={mail}
             className="contact__input"
             required
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
           />
 
-          <label className="contact__label" htmlFor="message">
+          <motion.label
+            className="contact__label"
+            htmlFor="message"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
             Message
-          </label>
-          <textarea
+          </motion.label>
+          <motion.textarea
             id="message"
             name="message"
             placeholder="Write your message..."
@@ -62,41 +104,93 @@ const ContactSection = () => {
             value={message}
             className="contact__textarea"
             required
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            viewport={{ once: true }}
           />
 
-          <input
+          <motion.input
             type="submit"
             value="Send Message"
             className="contact__button"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            viewport={{ once: true }}
           />
-        </form>
-
-        {status === "success" && (
-          <p className="contact__status contact__status--success">
-            Message sent!
-          </p>
-        )}
-        {status === "error" && (
-          <p className="contact__status contact__status--error">
-            Couldn't send message. Try again later.
-          </p>
-        )}
-      </div>
-
-      <div className="contact-info">
-        <h3 className="contact-info__heading">Get in touch</h3>
+        </motion.form>
+        <AnimatePresence>
+          {status === "success" && (
+            <motion.p
+              className="contact__status contact__status--success"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+            >
+              Message sent!
+            </motion.p>
+          )}
+          {status === "error" && (
+            <motion.p
+              className="contact__status contact__status--error"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+            >
+              Couldn't send message. Try again later.
+            </motion.p>
+          )}
+        </AnimatePresence>
+      </motion.div>
+      <motion.div
+        className="contact-info"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: true }}
+      >
+        <motion.h3
+          className="contact-info__heading"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Get in touch
+        </motion.h3>
         <ul className="contact-info__list">
-          <li className="contact-info__item">
+          <motion.li
+            className="contact-info__item"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
             <MdEmail className="contact-info__icon" />
             <a href="mailto:przemek.bialkwno@gmail.com">
               przemek.bialkwno@gmail.com
             </a>
-          </li>
-          <li className="contact-info__item">
+          </motion.li>
+          <motion.li
+            className="contact-info__item"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
             <FaPhoneAlt className="contact-info__icon" />
             <a href="tel:+48530034701">530 034 701</a>
-          </li>
-          <li className="contact-info__item">
+          </motion.li>
+          <motion.li
+            className="contact-info__item"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
             <FaGithub className="contact-info__icon" />
             <a
               href="https://github.com/Losssik"
@@ -106,9 +200,9 @@ const ContactSection = () => {
             >
               GitHub
             </a>
-          </li>
+          </motion.li>
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 };
