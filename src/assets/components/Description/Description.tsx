@@ -4,7 +4,6 @@ import photoOfMe from "../../photos/ja.jpg";
 const Description = () => {
   return (
     <>
-      {/* Nagłówek */}
       <motion.h2
         className="header"
         initial={{ opacity: 0, y: -20 }}
@@ -38,17 +37,9 @@ const Description = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}
             >
-              I am a self-taught frontend developer
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              viewport={{ once: true }}
-            >
-              passionate about building interactive and accessible web
-              applications. My goal is to become a full-stack developer.
+              I am a self-taught frontend developer passionate about building
+              interactive and accessible web applications. My goal is to become
+              a full-stack developer.
             </motion.p>
           </motion.div>
         </div>
