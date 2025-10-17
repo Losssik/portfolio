@@ -12,6 +12,7 @@ import {
 } from "react-icons/io5";
 import { GiBoatFishing } from "react-icons/gi";
 import ContactForm from "./assets/components/ContactForm/ContactForm";
+import Footer from "./assets/components/Footer/Footer";
 
 function App() {
   const projects = [
@@ -63,6 +64,7 @@ function App() {
       <Projects projects={projects} />
       <Description />
       <ContactForm />
+      <Footer />
     </div>
   );
 }

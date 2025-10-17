@@ -1,0 +1,11 @@
+@use "../../styles/base/variables" as *;
+
+.footer {
+  border: 1px solid $color-text-secondary;
+  border-radius: $radius;
+  padding: 10px;
+  margin: 20px;
+  font-size: 1.2rem;
+  color: $color-text-secondary;
+  text-align: center;
+}
