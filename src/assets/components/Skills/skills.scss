@@ -1,0 +1,32 @@
+@use "../../styles/base/variables" as *;
+
+.skills {
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border: 1px solid $color-text-secondary;
+    padding: 1rem;
+    margin: 2rem;
+    text-align: center;
+    gap: 2rem;
+    border-radius: $radius;
+  }
+  &__mastered {
+    flex: 0.5;
+    border-radius: $radius;
+    border: 1px solid $color-text-secondary;
+    margin-left: 1rem;
+  }
+
+  &__learning {
+    flex: 0.5;
+    border-radius: $radius;
+    border: 1px solid $color-text-secondary;
+    margin-right: 1rem;
+  }
+
+  &__list {
+    text-align: left;
+  }
+}
