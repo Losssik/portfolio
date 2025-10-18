@@ -50,18 +50,40 @@ const Skills = () => {
       </motion.h2>
       <div className="skills__flex">
         <div className="skills__mastered">
-          <h3>skill mastered</h3>
+          <h3 className="skills__title">skill mastered</h3>
           <ul className="skills__list">
-            {masteredSkills.map((skill) => (
-              <li>{skill}</li>
+            {masteredSkills.map((skill, index) => (
+              <motion.li
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: 0.3 + index * 0.2,
+                }}
+                viewport={{ once: true }}
+              >
+                {skill}
+              </motion.li>
             ))}
           </ul>
         </div>
         <div className="skills__learning">
-          <h3>currently learning</h3>
+          <h3 className="skills__title">currently learning</h3>
           <ul className="skills__list">
-            {learningSkills.map((skill) => (
-              <li>{skill}</li>
+            {learningSkills.map((skill, index) => (
+              <motion.li
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: 0.3 + index * 0.2,
+                }}
+                viewport={{ once: true }}
+              >
+                {skill}
+              </motion.li>
             ))}
           </ul>
         </div>
