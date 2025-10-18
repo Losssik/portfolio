@@ -25,13 +25,13 @@ const Description = () => {
             <img src={photoOfMe} className="description__photo" alt="Me" />
           </motion.div>
           <motion.div
-            className="description__text"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             viewport={{ once: true }}
           >
             <motion.p
+              className="description__text"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}

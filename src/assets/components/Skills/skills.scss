@@ -9,7 +9,7 @@
     padding: 1rem;
     margin: 2rem;
     text-align: center;
-    gap: 2rem;
+
     border-radius: $radius;
     font-size: 1.4rem;
   }
@@ -22,22 +22,23 @@
   &__mastered {
     flex: 0.5;
     border-right: 1px solid $color-text-secondary;
-    margin-left: 1rem;
   }
 
   &__learning {
     flex: 0.5;
-
-    margin-right: 1rem;
   }
 
   &__list {
     text-align: left;
-
+    text-transform: lowercase;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 2rem;
     gap: 1rem;
     margin-top: 2rem;
+
+    &--learning {
+      margin-left: 1rem;
+    }
   }
 }

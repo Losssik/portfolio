@@ -70,7 +70,7 @@ const Skills = () => {
         </div>
         <div className="skills__learning">
           <h3 className="skills__title">currently learning</h3>
-          <ul className="skills__list">
+          <ul className="skills__list skills__list--learning">
             {learningSkills.map((skill, index) => (
               <motion.li
                 initial={{ opacity: 0, x: 30 }}
