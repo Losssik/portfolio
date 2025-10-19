@@ -46,3 +46,19 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .about-me__description {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-me__name {
+    font-size: 3.5rem;
+  }
+
+  .about-me__description {
+    letter-spacing: 4px;
+  }
+}

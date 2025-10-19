@@ -30,6 +30,7 @@
   &__form {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: 1rem;
   }
 
@@ -129,15 +130,9 @@
   }
 }
 
-/* RWS */
 @media (max-width: 900px) {
   .contact-wrapper {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .contact,
-  .contact-info {
-    width: 100%;
+    align-items: stretch;
   }
 }

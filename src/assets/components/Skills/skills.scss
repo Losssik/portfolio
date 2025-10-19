@@ -42,3 +42,9 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .skills__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
