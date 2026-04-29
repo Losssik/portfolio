@@ -103,6 +103,24 @@ console.log(sum(1, 2, 3, 4)); // 10`}
 user = ["Tom", 25]; // OK
 user = [25, "Tom"]; // Error`}
       />
+      <h3>tuples with parameters</h3>
+      <p>
+        Tuples with rest parameters in TypeScript let you define a function that
+        accepts a fixed structure of arguments using tuple types. The following
+        snippet means: "function must receive exactly two arguments: first
+        string, second number".
+      </p>
+      <CodeBlock
+        code={`function printUser(...user: [string, number]) {
+  const [name, age] = user;
+
+  console.log(name);
+  console.log(age);
+}
+
+printUser("Tom", 25); // OK
+printUser(25, "Tom"); // Error`}
+      />
     </div>
   );
 };
