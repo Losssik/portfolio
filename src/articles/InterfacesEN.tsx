@@ -154,6 +154,113 @@ const user: User = {
   },
 };`}
       />
+      <h3>Interface Extensions</h3>
+      <p>
+        Interface extensions in TypeScript allow one interface to inherit
+        properties from another using the <b>extends</b> keyword.
+      </p>
+      <CodeBlock
+        code={`interface User {
+  name: string;
+}
+
+interface Admin extends User {
+  role: string;
+}
+
+const admin: Admin = {
+  name: "Tom",
+  role: "superadmin",
+};`}
+      />
+      Multiple extensions example:
+      <CodeBlock
+        code={`interface A {
+  a: number;
+}
+
+interface B {
+  b: string;
+}
+
+interface C extends A, B {
+  c: boolean;
+}`}
+      />
+      <h3>Overridden Properties</h3>
+      <p>
+        Overridden properties in TypeScript happen when an extending interface
+        defines the same property as a base interface, but with a different
+        (usually more specific) type.
+      </p>
+      <CodeBlock
+        code={`interface User {
+  role: string;
+}
+
+interface Admin extends User {
+  role: "admin"; // This works because "admin" is a narrower type than string.
+}`}
+      />
+      Invalid override happens when you make the type broader.
+      <CodeBlock
+        code={`interface User {
+  role: "admin";
+}
+
+interface Admin extends User {
+  role: string; // Error (wider type)
+}`}
+      />
+      <h3>Interface Merging</h3>
+      <p>
+        Interface merging in TypeScript means that multiple declarations of the
+        same interface are automatically combined into one.
+      </p>
+      <CodeBlock
+        code={`interface User {
+  name: string;
+}
+
+interface User {
+  age: number;
+}
+
+// IT COMBINES/MERGES INTO:
+interface User {
+  name: string;
+  age: number;
+}
+
+const user: User = {
+  name: "Tom",
+  age: 25,
+};
+
+`}
+      />
+      Note that merged interfaces may not declare the same name of a property
+      multiple times with different types.
+      <CodeBlock
+        code={`interface User {
+  name: string;
+}
+
+interface User {
+  name: number; //  CONFLICT - NOT ALLOWED
+}`}
+      />
+      <CodeBlock
+        code={`interface A {
+  id: string;
+}
+
+interface B {
+  id: number;
+}
+
+interface C extends A, B {} //  CONFLICT - 2 DIFFERENT TYPES OF ID `}
+      />
     </div>
   );
 };
