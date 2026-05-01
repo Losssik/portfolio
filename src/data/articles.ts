@@ -24,6 +24,7 @@ import ObjectsInTypeScriptsEN from "../articles/ObjectsInTypescriptEN";
 import FunctionsTypeScriptEN from "../articles/FunctionsTypeScriptEN";
 import ArraysInTypeScriptEN from "../articles/ArraysInTypeScriptEN";
 import InterfacesEN from "../articles/InterfacesEN";
+import TypeModifiersEN from "../articles/TypeModifiersEN";
 
 export type ArticlesMap = Record<string, FC>;
 // [key: string] = typ obiektu typu string / FC = component
@@ -55,4 +56,5 @@ export const articlesMap: ArticlesMap = {
   functions_in_typescript_EN: FunctionsTypeScriptEN,
   arrays_in_typescript_EN: ArraysInTypeScriptEN,
   interfaces_EN: InterfacesEN,
+  type_modifiers_EN: TypeModifiersEN,
 };
