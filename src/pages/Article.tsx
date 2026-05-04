@@ -4,9 +4,10 @@ import { articlesMap } from "../data/articles";
 const Article = () => {
   const { title } = useParams();
 
-  const Component = title ? articlesMap[title] : null;
+  const article = title ? articlesMap[title] : null;
+  const Component = article?.component;
 
-  if (!Component) return <p>article no found ;(</p>;
+  if (!Component) return <p>article not found ;(</p>;
 
   return <Component />;
 };
