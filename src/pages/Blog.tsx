@@ -44,7 +44,7 @@ const Blog = () => {
         <h2
           style={{
             position: "absolute",
-            top: 0,
+            top: 25,
             left: "50%",
             transform: "translateX(-50%)",
           }}
@@ -74,6 +74,7 @@ const Blog = () => {
                       cursor: "pointer",
                       fontWeight: "bold",
                       marginTop: "10px",
+                      minWidth: "150px",
                     }}
                     onClick={() => handleCategoryToggle(category)}
                   >
