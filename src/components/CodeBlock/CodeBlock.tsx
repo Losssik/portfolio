@@ -15,7 +15,7 @@ const CodeBlock = ({ code }: CodeBlockProps) => {
       customStyle={{
         fontSize: "1.4rem",
         marginBottom: "1rem",
-        maxWidth: isMobile ? "300px" : "none",
+        maxWidth: isMobile ? "320px" : "none",
         overflowX: isMobile ? "auto" : "visible",
       }}
     >

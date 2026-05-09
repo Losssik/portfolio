@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { articlesMap } from "../data/articles";
 import { useState } from "react";
+import { FaHome } from "react-icons/fa";
 
 const categoryLabels: Record<string, string> = {
   javascript: "JavaScript",
@@ -40,19 +41,6 @@ const Blog = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <Link to="/">
-        <h2
-          style={{
-            position: "absolute",
-            top: 25,
-            left: "50%",
-            transform: "translateX(-50%)",
-          }}
-        >
-          Blog
-        </h2>
-      </Link>
-
       <div
         style={{
           display: "flex",
@@ -62,11 +50,17 @@ const Blog = () => {
       >
         <div>
           <button className="menu" onClick={handleMenu}>
-            articles
+            menu
           </button>
+          <Link to="/" className="home">
+            <FaHome />
+          </Link>
 
           {showMenu && (
             <ul className="menu__ul menu__ul--open">
+              <Link to="/" className="home--pc">
+                Home
+              </Link>
               {Object.entries(groupedArticles).map(([category, articles]) => (
                 <li key={category}>
                   <div
