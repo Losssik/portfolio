@@ -115,6 +115,64 @@ function createBox<T>(value: T): Box<T> {
 
 const box = createBox("hello");`}
       />
+      <h3>Generic Defaults</h3>
+      <p>
+        Generic defaults in TypeScript let you provide a default type for a
+        generic parameter, so you don’t always have to specify it.
+      </p>
+      <CodeBlock
+        code={`interface Box<T = string> 
+  value: T;
+}
+
+const box: Box = {
+  value: "hello", // T = string (default)
+};  
+
+// CHANGIGN TYPE TO NUMBER
+const numberBox: Box<number> = {
+  value: 123,
+};
+
+`}
+      />
+      <h3>async functions</h3>
+      <p>
+        Async functions in TypeScript are functions that work with asynchronous
+        code and always return a <b>Promise</b>.
+      </p>
+      <CodeBlock
+        code={`// Type: (text: string) => Promise<number>
+
+async function lengthAfterSecond(text: string) {
+
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+
+    return text.length;
+
+}
+    // Type: (text: string) => Promise<number>
+
+async function lengthImmediately(text: string) {
+
+    return text.length;
+
+}
+`}
+      />
+      Any manually declared return type on an async function therefore{" "}
+      <b>must always be a Promise type</b>
+      <CodeBlock
+        code={`async function givesPromiseForString(): Promise<string> {
+  return "Done!"; // OK
+}
+
+
+ // Error: The return type of an async function
+async function givesString(): string {
+  return "Done!";
+}`}
+      />
     </div>
   );
 };
