@@ -26,6 +26,7 @@ import ArraysInTypeScriptEN from "../articles/ArraysInTypeScriptEN";
 import InterfacesEN from "../articles/InterfacesEN";
 import TypeModifiersEN from "../articles/TypeModifiersEN";
 import GenericsEN from "../articles/GeneriscEN";
+import ReduxWithTypescriptEN from "../articles/ReduxWithTypescriptEN";
 
 export type Article = {
   component: FC;
@@ -141,6 +142,10 @@ export const articlesMap: Record<string, Article> = {
   },
   generics_EN: {
     component: GenericsEN,
+    category: "typescript",
+  },
+  redux_with_typescript_EN: {
+    component: ReduxWithTypescriptEN,
     category: "typescript",
   },
 
