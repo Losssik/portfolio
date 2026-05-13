@@ -27,6 +27,7 @@ import InterfacesEN from "../articles/InterfacesEN";
 import TypeModifiersEN from "../articles/TypeModifiersEN";
 import GenericsEN from "../articles/GeneriscEN";
 import ReduxWithTypescriptEN from "../articles/ReduxWithTypescriptEN";
+import CRUDOperationsEN from "../articles/CRUDOperationsEN";
 
 export type Article = {
   component: FC;
@@ -108,6 +109,10 @@ export const articlesMap: Record<string, Article> = {
   },
   image_optimization_EN: {
     component: ImageOptimizationEN,
+    category: "next",
+  },
+  crud_operations_EN: {
+    component: CRUDOperationsEN,
     category: "next",
   },
 
