@@ -28,6 +28,7 @@ import TypeModifiersEN from "../articles/TypeModifiersEN";
 import GenericsEN from "../articles/GeneriscEN";
 import ReduxWithTypescriptEN from "../articles/ReduxWithTypescriptEN";
 import CRUDOperationsEN from "../articles/CRUDOperationsEN";
+import PopulateEN from "../articles/PopulateEN";
 
 export type Article = {
   component: FC;
@@ -157,6 +158,10 @@ export const articlesMap: Record<string, Article> = {
   // Other
   redux_toolkit_EN: {
     component: ReduxToolkitEN,
+    category: "other",
+  },
+  populate_EN: {
+    component: PopulateEN,
     category: "other",
   },
 };
