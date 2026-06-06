@@ -29,6 +29,7 @@ import GenericsEN from "../articles/GeneriscEN";
 import ReduxWithTypescriptEN from "../articles/ReduxWithTypescriptEN";
 import CRUDOperationsEN from "../articles/CRUDOperationsEN";
 import PopulateEN from "../articles/PopulateEN";
+import ParamsEn from "../articles/ParamsEN";
 
 export type Article = {
   component: FC;
@@ -114,6 +115,10 @@ export const articlesMap: Record<string, Article> = {
   },
   crud_operations_EN: {
     component: CRUDOperationsEN,
+    category: "next",
+  },
+  params_EN: {
+    component: ParamsEn,
     category: "next",
   },
 
