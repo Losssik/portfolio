@@ -21,7 +21,7 @@ const Home = () => {
       logo: <IoBookOutline />,
       tags: ["MERN", "full-stack", "react", "jwt"],
       github: "https://github.com/przemyslaw-bialk/clean-read",
-      live_version: "https://host559218.xce.pl/",
+      live_version: "https://clean-read.vercel.app/",
     },
     {
       title: "tiste",
