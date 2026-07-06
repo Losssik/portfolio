@@ -30,6 +30,7 @@ import ReduxWithTypescriptEN from "../articles/ReduxWithTypescriptEN";
 import CRUDOperationsEN from "../articles/CRUDOperationsEN";
 import PopulateEN from "../articles/PopulateEN";
 import ParamsEn from "../articles/ParamsEN";
+import LoopsInJSPL from "../articles/LoopsInJSPL";
 
 export type Article = {
   component: FC;
@@ -48,6 +49,10 @@ export const articlesMap: Record<string, Article> = {
   },
   operators_and_loops_PL: {
     component: OperatorsAndLoopsPL,
+    category: "javascript",
+  },
+  loops_in_JS_PL: {
+    component: LoopsInJSPL,
     category: "javascript",
   },
 
