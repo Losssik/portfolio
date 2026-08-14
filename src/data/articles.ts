@@ -31,6 +31,7 @@ import CRUDOperationsEN from "../articles/CRUDOperationsEN";
 import PopulateEN from "../articles/PopulateEN";
 import ParamsEn from "../articles/ParamsEN";
 import LoopsInJSPL from "../articles/LoopsInJSPL";
+import PersistReduxDataEN from "../articles/PersistReduxDataEn";
 
 export type Article = {
   component: FC;
@@ -172,6 +173,10 @@ export const articlesMap: Record<string, Article> = {
   },
   populate_EN: {
     component: PopulateEN,
+    category: "other",
+  },
+  persisting_data_in_redux_EN: {
+    component: PersistReduxDataEN,
     category: "other",
   },
 };
