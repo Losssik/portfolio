@@ -32,6 +32,7 @@ import PopulateEN from "../articles/PopulateEN";
 import ParamsEn from "../articles/ParamsEN";
 import LoopsInJSPL from "../articles/LoopsInJSPL";
 import PersistReduxDataEN from "../articles/PersistReduxDataEn";
+import CustomHooksEn from "../articles/CustomHooksEN";
 
 export type Article = {
   component: FC;
@@ -177,6 +178,10 @@ export const articlesMap: Record<string, Article> = {
   },
   persisting_data_in_redux_EN: {
     component: PersistReduxDataEN,
+    category: "other",
+  },
+  custom_hooks_EN: {
+    component: CustomHooksEn,
     category: "other",
   },
 };
